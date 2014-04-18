@@ -21,7 +21,7 @@ if ($_POST['submitted'] && $_FILES['opml']['size'] < 30000) {
 
 //if there's no valid account requested, we send 'em to the demo page.
 if (!$_GET['account'] || !is_dir('./accounts/' . $_GET['account'])) {
-		header("Location: ?account=" . $demo);
+		//header("Location: ?account=" . $demo);
 	}
 	
 echo '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"><html><head>';
@@ -72,7 +72,7 @@ digg_window = 'new';
 			<h2>Welcome to your personal FeedVis page!</h2>
 			<p>Bookmark this page; every time you return, your feed data will be updated.</p>
 		</div>
-		<div id="make-account">
+		<div id="_make-account">
 			<h2>Create an account:</h2>
 			<form method="POST" enctype="multipart/form-data" action="index.php?account=<?php echo $demo; ?>">
 				<label for="account">Username: </label>
